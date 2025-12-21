@@ -10,6 +10,10 @@ import img3 from "./assets/gallery/IMG_5853.jpg";
 import img4 from "./assets/gallery/IMG_9051.jpg";
 import img5 from "./assets/gallery/IMG_9523.jpg";
 import img6 from "./assets/gallery/IMG_2.jpg";
+import img7 from "./assets/gallery/img_44.png";
+import img8 from "./assets/gallery/image_45.jpeg";
+import img9 from "./assets/gallery/img_46.jpeg";
+
 
 
 const galleryImages = [
@@ -19,6 +23,11 @@ const galleryImages = [
   { src: img4, alt: "placeholder" },
   { src: img5, alt: "placeholder" },
   { src: img6, alt: "placeholder" },
+  { src: img7, alt: "placeholder" },
+  { src: img8, alt: "placeholder" },
+  { src: img9, alt: "placeholder" },
+
+
 
 
   // Add more images here after conversion
