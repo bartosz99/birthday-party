@@ -3,8 +3,10 @@ import HeroSection from "@/components/HeroSection";
 import InfoSection from "@/components/InfoSection";
 import CountdownSection from "@/components/CountdownSection";
 import LocationSection from "@/components/LocationSection";
+import VideoSection from "@/components/VideoSection";
 import GuestListSection from "@/components/GuestListSection";
 import FooterSection from "@/components/FooterSection";
+import QuoteSection from "@/components/QuoteSection";
 
 const Index = () => {
   return (
@@ -17,7 +19,9 @@ const Index = () => {
         <HeroSection />
         <CountdownSection />
         <InfoSection />
+        <QuoteSection />
         <LocationSection />
+        <VideoSection />
         <GuestListSection />
         <FooterSection />
       </main>
