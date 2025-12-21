@@ -4,6 +4,7 @@ import InfoSection from "@/components/InfoSection";
 import CountdownSection from "@/components/CountdownSection";
 import LocationSection from "@/components/LocationSection";
 import VideoSection from "@/components/VideoSection";
+import GallerySection from "@/components/GallerySection";
 import GuestListSection from "@/components/GuestListSection";
 import FooterSection from "@/components/FooterSection";
 import QuoteSection from "@/components/QuoteSection";
@@ -13,13 +14,14 @@ const Index = () => {
     <div className="relative min-h-screen bg-background overflow-x-hidden">
       {/* Animated particle background */}
       <ParticleBackground />
-      
+
       {/* Main content */}
       <main className="relative z-10">
         <HeroSection />
         <CountdownSection />
         <InfoSection />
         <QuoteSection />
+        <GallerySection />
         <LocationSection />
         <VideoSection />
         <GuestListSection />

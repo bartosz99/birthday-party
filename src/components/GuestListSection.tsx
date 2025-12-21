@@ -6,7 +6,7 @@ const guests = [
   { name: "Zuzanna Skalska", status: "confirmed", special: true },
   { name: "Seweryn Cieśla", status: "confirmed", special: false },
   { name: "Sylwia Wanat", status: "confirmed", special: false },
-  { name: "Paweł Kisiel-doroginicki", status: "confirmed", special: true },
+  { name: "Paweł Kisiel-dorohinicki", status: "confirmed", special: true },
   { name: "Dawid Rówiński", status: "confirmed", special: false },
   { name: "Weronika Sordyl", status: "confirmed", special: false },
   { name: "Bartosz Kwiatkowski", status: "confirmed", special: false },
@@ -18,12 +18,13 @@ const guests = [
   { name: "Joanna Dubielewska", status: "pending", special: false },
   { name: "Gosia Kmon", status: "confirmed", special: false },
   { name: "Jakub Sroka", status: "confirmed", special: false },
-  { name: "Krzysiek Górak", status: "pending", special: false },
+  { name: "Krzysiek Górak", status: "confirmed", special: false },
   { name: "Ola Zielińska", status: "pending", special: false },
   { name: "Weronika Gołota", status: "pending", special: false },
   { name: "Eliza Wojnar", status: "pending", special: false },
   { name: "Maks Wojnar", status: "pending", special: false },
-  { name: "Anoni Kułak", status: "pending", special: false },
+  { name: "Antoni Kułak", status: "pending", special: false },
+
 
 ];
 
