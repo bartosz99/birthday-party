@@ -4,26 +4,10 @@ import { MapPin, Navigation, Car, Train, Bus } from "lucide-react";
 const LocationSection = () => {
   // Placeholder address - zmień na właściwy adres
   const address = "ul. Przykładowa 123, 00-001 Warszawa";
-  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.5675846399584!2d21.0067249!3d52.2319581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc8c92692e49%3A0xc2e97ae5311f2dc2!2sPalac%20Kultury%20i%20Nauki!5e0!3m2!1spl!2spl!4v1703161200000!5m2!1spl!2spl";
-  const googleMapsLink = "https://maps.google.com/?q=Pałac+Kultury+i+Nauki+Warszawa";
+  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2561.888281980995!2d19.94045371197647!3d50.05092407139981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b0aecebfd57%3A0x7a5970e24c4cd61c!2sBeerStreet!5e0!3m2!1spl!2spl!4v1766323715825!5m2!1spl!2spl";
+  const googleMapsLink = "https://maps.app.goo.gl/7cf4QCYBijMegumn7";
 
-  const directions = [
-    {
-      icon: Car,
-      title: "Samochodem",
-      description: "Parking dostępny przy budynku. Wjazd od ulicy Marszałkowskiej."
-    },
-    {
-      icon: Train,
-      title: "Pociągiem",
-      description: "Stacja Warszawa Centralna - 5 min pieszo."
-    },
-    {
-      icon: Bus,
-      title: "Komunikacją miejską",
-      description: "Przystanek Centrum - linie 127, 175, 520."
-    }
-  ];
+
 
   return (
     <section className="py-20 px-4 relative overflow-hidden">
@@ -75,7 +59,7 @@ const LocationSection = () => {
                 className="w-full"
                 title="Lokalizacja imprezy"
               />
-              
+
               {/* Address overlay */}
               <div className="p-6 border-t border-border/50">
                 <div className="flex items-start gap-4">
@@ -112,11 +96,11 @@ const LocationSection = () => {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
+            {/* <h3 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
               <Navigation className="w-6 h-6 text-neon-cyan" />
               Jak do nas dotrzeć?
-            </h3>
-
+            </h3> */}
+{/*
             {directions.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -146,10 +130,10 @@ const LocationSection = () => {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))} */}
 
             {/* Additional info card */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.7 }}
@@ -157,10 +141,10 @@ const LocationSection = () => {
               className="mt-6 p-5 bg-gradient-to-br from-neon-yellow/10 to-neon-pink/10 rounded-xl border border-neon-yellow/30"
             >
               <p className="text-sm text-foreground/80">
-                💡 <span className="font-semibold">Pro tip:</span> Jeśli jedziesz samochodem, 
+                💡 <span className="font-semibold">Pro tip:</span> Jeśli jedziesz samochodem,
                 polecam wyjazd wcześniej - w piątek korki mogą być spore!
               </p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

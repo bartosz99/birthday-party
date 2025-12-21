@@ -2,13 +2,21 @@ import { motion } from "framer-motion";
 import { Users, UserPlus, Star, Crown } from "lucide-react";
 
 const guests = [
-  { name: "Imię Gościa 1", status: "confirmed", special: true },
-  { name: "Imię Gościa 2", status: "confirmed", special: false },
-  { name: "Imię Gościa 3", status: "pending", special: false },
-  { name: "Imię Gościa 4", status: "confirmed", special: false },
-  { name: "Imię Gościa 5", status: "pending", special: false },
-  { name: "Imię Gościa 6", status: "confirmed", special: true },
-  { name: "Wkrótce więcej...", status: "pending", special: false },
+  { name: "Bartosz Cieśla", status: "confirmed", special: true },
+  { name: "Zuzanna Skalska", status: "confirmed", special: true },
+  { name: "Seweryn Cieśla", status: "confirmed", special: false },
+  { name: "Sylwia Wanat", status: "confirmed", special: false },
+  { name: "Paweł Kisiel-doroginicki", status: "confirmed", special: true },
+  { name: "Dawid Rówiński", status: "confirmed", special: false },
+  { name: "Weronika Sordyl", status: "confirmed", special: false },
+  { name: "Bartosz Kwiatkowski", status: "confirmed", special: false },
+  { name: "Agata Zwolak", status: "confirmed", special: false },
+  { name: "Bartosz Wyciszkiewicz", status: "confirmed", special: false },
+  { name: "Gosia Kmon", status: "confirmed", special: false },
+  { name: "Jakub Sroka", status: "confirmed", special: false },
+
+
+
 ];
 
 const GuestListSection = () => {
@@ -36,7 +44,7 @@ const GuestListSection = () => {
               <span className="text-neon-cyan font-bold">{confirmedCount}</span> potwierdzonych
             </span>
           </motion.div>
-          
+
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-4 text-glow-cyan text-secondary">
             LISTA GOŚCI
           </h2>
@@ -61,8 +69,8 @@ const GuestListSection = () => {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   whileHover={{ scale: 1.02, x: 10 }}
                   className={`flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 ${
-                    guest.status === "confirmed" 
-                      ? "bg-neon-green/10 border border-neon-green/30" 
+                    guest.status === "confirmed"
+                      ? "bg-neon-green/10 border border-neon-green/30"
                       : "bg-muted/30 border border-muted"
                   }`}
                 >
@@ -70,8 +78,8 @@ const GuestListSection = () => {
                   <motion.div
                     whileHover={{ rotate: [0, -10, 10, 0] }}
                     className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                      guest.status === "confirmed" 
-                        ? "bg-neon-green/20" 
+                      guest.status === "confirmed"
+                        ? "bg-neon-green/20"
                         : "bg-muted"
                     }`}
                   >
@@ -87,8 +95,8 @@ const GuestListSection = () => {
                   {/* Name */}
                   <div className="flex-1">
                     <p className={`font-display font-semibold ${
-                      guest.status === "confirmed" 
-                        ? "text-foreground" 
+                      guest.status === "confirmed"
+                        ? "text-foreground"
                         : "text-muted-foreground"
                     }`}>
                       {guest.name}
@@ -103,8 +111,8 @@ const GuestListSection = () => {
                     animate={{ scale: guest.status === "confirmed" ? [1, 1.2, 1] : 1 }}
                     transition={{ duration: 2, repeat: Infinity }}
                     className={`w-3 h-3 rounded-full ${
-                      guest.status === "confirmed" 
-                        ? "bg-neon-green shadow-[0_0_10px_hsl(var(--neon-green))]" 
+                      guest.status === "confirmed"
+                        ? "bg-neon-green shadow-[0_0_10px_hsl(var(--neon-green))]"
                         : "bg-muted-foreground"
                     }`}
                   />

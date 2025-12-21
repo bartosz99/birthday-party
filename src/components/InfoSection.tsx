@@ -29,8 +29,8 @@ const infoCards = [
 ];
 
 const amenities = [
-  { icon: Beer, label: "Piwo", description: "Do kupienia na miejscu" },
-  { icon: Pizza, label: "Pizza", description: "Zamówimy razem" },
+  { icon: Beer, label: "Piwo", description: "Syty wybór" },
+  { icon: Pizza, label: "Pizza", description: "albo burgery do kupienia na miejscu!" },
   { icon: Target, label: "Dart", description: "Turniej w planach!" },
 ];
 
@@ -112,7 +112,7 @@ const InfoSection = () => {
           <h3 className="text-2xl md:text-3xl font-display font-bold text-center mb-12 text-glow-yellow text-accent">
             CO NAS CZEKA?
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {amenities.map((item, index) => (
               <motion.div

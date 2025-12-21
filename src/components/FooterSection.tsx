@@ -20,14 +20,14 @@ const FooterSection = () => {
             {[PartyPopper, Music, Sparkles, Heart].map((Icon, index) => (
               <motion.div
                 key={index}
-                animate={{ 
+                animate={{
                   y: [0, -10, 0],
-                  rotate: index % 2 === 0 ? [-5, 5, -5] : [5, -5, 5] 
+                  rotate: index % 2 === 0 ? [-5, 5, -5] : [5, -5, 5]
                 }}
-                transition={{ 
-                  duration: 2, 
-                  repeat: Infinity, 
-                  delay: index * 0.2 
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  delay: index * 0.2
                 }}
               >
                 <Icon className={`w-8 h-8 ${
@@ -84,7 +84,7 @@ const FooterSection = () => {
           </motion.div>
 
           {/* Copyright */}
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -92,7 +92,7 @@ const FooterSection = () => {
             className="mt-12 text-muted-foreground text-sm flex items-center justify-center gap-2"
           >
             Stworzone z <Heart className="w-4 h-4 text-neon-pink animate-pulse" /> na tę wyjątkową okazję
-          </motion.p>
+          </motion.p> */}
         </motion.div>
       </div>
     </footer>
