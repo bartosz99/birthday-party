@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Users, UserPlus, Star, Crown, UserX } from "lucide-react";
+import { Users, UserPlus, Star, Crown, UserX, HelpCircle } from "lucide-react";
 
-// Status options: "confirmed" | "pending" | "declined"
+// Status options: "confirmed" | "pending" | "declined" | "maybe"
 const guests = [
   { name: "Bartosz Cieśla", status: "confirmed", special: true },
   { name: "Zuzanna Skalska", status: "confirmed", special: true },
@@ -17,8 +17,8 @@ const guests = [
   { name: "Jakub Sroka", status: "confirmed", special: false },
   { name: "Krzysiek Górak", status: "confirmed", special: false },
   { name: "Bronislava Cieciak", status: "confirmed", special: false },
-  { name: "Ola Zielińska", status: "pending", special: false },
-  { name: "Weronika Gołota", status: "pending", special: false },
+  { name: "Ola Zielińska", status: "maybe", special: false },
+  { name: "Weronika Gołota", status: "maybe", special: false },
   { name: "Antoni Kułak", status: "pending", special: false },
   { name: "Kasia Jarosz", status: "pending", special: false },
 
@@ -87,6 +87,8 @@ const GuestListSection = () => {
                       ? "bg-neon-green/10 border border-neon-green/30"
                       : guest.status === "declined"
                       ? "bg-red-500/10 border border-red-500/30"
+                      : guest.status === "maybe"
+                      ? "bg-neon-yellow/10 border border-neon-yellow/30"
                       : "bg-muted/30 border border-muted"
                   }`}
                 >
@@ -98,6 +100,8 @@ const GuestListSection = () => {
                         ? "bg-neon-green/20"
                         : guest.status === "declined"
                         ? "bg-red-500/20"
+                        : guest.status === "maybe"
+                        ? "bg-neon-yellow/20"
                         : "bg-muted"
                     }`}
                   >
@@ -107,6 +111,8 @@ const GuestListSection = () => {
                       <Star className="w-6 h-6 text-neon-green" />
                     ) : guest.status === "declined" ? (
                       <UserX className="w-6 h-6 text-red-500" />
+                    ) : guest.status === "maybe" ? (
+                      <HelpCircle className="w-6 h-6 text-neon-yellow" />
                     ) : (
                       <UserPlus className="w-6 h-6 text-muted-foreground" />
                     )}
@@ -119,24 +125,28 @@ const GuestListSection = () => {
                         ? "text-foreground"
                         : guest.status === "declined"
                         ? "text-red-400 line-through"
+                        : guest.status === "maybe"
+                        ? "text-neon-yellow"
                         : "text-muted-foreground"
                     }`}>
                       {guest.name}
                     </p>
                     <p className="text-xs text-muted-foreground uppercase tracking-wider">
-                      {guest.status === "confirmed" ? "Potwierdzone" : guest.status === "declined" ? "Nie może przyjść" : "Oczekuje"}
+                      {guest.status === "confirmed" ? "Potwierdzone" : guest.status === "declined" ? "Nie może przyjść" : guest.status === "maybe" ? "Może przyjdzie" : "Oczekuje"}
                     </p>
                   </div>
 
                   {/* Status indicator */}
                   <motion.div
-                    animate={{ scale: guest.status === "confirmed" ? [1, 1.2, 1] : 1 }}
+                    animate={{ scale: guest.status === "confirmed" || guest.status === "maybe" ? [1, 1.2, 1] : 1 }}
                     transition={{ duration: 2, repeat: Infinity }}
                     className={`w-3 h-3 rounded-full ${
                       guest.status === "confirmed"
                         ? "bg-neon-green shadow-[0_0_10px_hsl(var(--neon-green))]"
                         : guest.status === "declined"
                         ? "bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"
+                        : guest.status === "maybe"
+                        ? "bg-neon-yellow shadow-[0_0_10px_hsl(var(--neon-yellow))]"
                         : "bg-muted-foreground"
                     }`}
                   />

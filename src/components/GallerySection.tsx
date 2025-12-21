@@ -13,6 +13,9 @@ import img6 from "./assets/gallery/IMG_2.jpg";
 import img7 from "./assets/gallery/img_44.png";
 import img8 from "./assets/gallery/image_45.jpeg";
 import img9 from "./assets/gallery/img_46.jpeg";
+import img10 from "./assets/gallery/50af4393-28d8-4089-b0f1-4f068a350c87.jpeg"
+import img11 from "./assets/gallery/c94bbeaa-58fc-405a-adb0-64275bdf6f5a.jpeg"
+
 
 
 
@@ -26,6 +29,9 @@ const galleryImages = [
   { src: img7, alt: "placeholder" },
   { src: img8, alt: "placeholder" },
   { src: img9, alt: "placeholder" },
+  { src: img10, alt: "placeholder" },
+  { src: img11, alt: "placeholder" },
+
 
 
 
