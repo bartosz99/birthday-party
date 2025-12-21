@@ -37,7 +37,7 @@ const LocationSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid gap-8">
           {/* Map */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -61,7 +61,7 @@ const LocationSection = () => {
               />
 
               {/* Address overlay */}
-              <div className="p-6 border-t border-border/50">
+              {/* <div className="p-6 border-t border-border/50">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-neon-pink/20 rounded-xl">
                     <MapPin className="w-6 h-6 text-neon-pink" />
@@ -84,18 +84,18 @@ const LocationSection = () => {
                     </motion.a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
           {/* Directions */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
             className="space-y-4"
-          >
+          > */}
             {/* <h3 className="font-display text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
               <Navigation className="w-6 h-6 text-neon-cyan" />
               Jak do nas dotrzeć?
@@ -145,7 +145,7 @@ const LocationSection = () => {
                 polecam wyjazd wcześniej - w piątek korki mogą być spore!
               </p>
             </motion.div> */}
-          </motion.div>
+          {/* </motion.div> */}
         </div>
       </div>
     </section>
