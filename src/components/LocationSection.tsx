@@ -33,7 +33,7 @@ const LocationSection = () => {
             </h2>
           </div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Znajdź nas i dołącz do zabawy!
+            Klasyk na Kazimierzu
           </p>
         </motion.div>
 

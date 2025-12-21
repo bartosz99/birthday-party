@@ -58,7 +58,7 @@ const FooterSection = () => {
             transition={{ delay: 0.4 }}
             className="text-muted-foreground text-lg mb-8"
           >
-            Nie możemy się doczekać wspólnej zabawy 🎉
+            Sprawmy sobie craftowego kaca 🎉
           </motion.p>
 
           {/* Date reminder */}
