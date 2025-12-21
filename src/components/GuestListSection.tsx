@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Users, UserPlus, Star, Crown } from "lucide-react";
+import { Users, UserPlus, Star, Crown, UserX } from "lucide-react";
 
+// Status options: "confirmed" | "pending" | "declined"
 const guests = [
   { name: "Bartosz Cieśla", status: "confirmed", special: true },
   { name: "Zuzanna Skalska", status: "confirmed", special: true },
@@ -12,18 +13,22 @@ const guests = [
   { name: "Bartosz Kwiatkowski", status: "confirmed", special: false },
   { name: "Agata Zwolak", status: "confirmed", special: false },
   { name: "Bartosz Wyciszkiewicz", status: "confirmed", special: false },
-  { name: "Kasia Jarosz", status: "pending", special: false },
-  { name: "Bronislava Cieciak", status: "pending", special: false },
-  { name: "Stanislava Cieciak", status: "pending", special: false },
-  { name: "Joanna Dubielewska", status: "pending", special: false },
   { name: "Gosia Kmon", status: "confirmed", special: false },
   { name: "Jakub Sroka", status: "confirmed", special: false },
   { name: "Krzysiek Górak", status: "confirmed", special: false },
+  { name: "Bronislava Cieciak", status: "confirmed", special: false },
   { name: "Ola Zielińska", status: "pending", special: false },
   { name: "Weronika Gołota", status: "pending", special: false },
-  { name: "Eliza Wojnar", status: "pending", special: false },
-  { name: "Maks Wojnar", status: "pending", special: false },
   { name: "Antoni Kułak", status: "pending", special: false },
+  { name: "Kasia Jarosz", status: "pending", special: false },
+
+  { name: "Eliza Wojnar", status: "declined", special: false },
+
+  { name: "Maks Wojnar", status: "declined", special: false },
+  { name: "Stanislava Cieciak", status: "declined", special: false },
+  { name: "Joanna Dubielewska", status: "declined", special: false },
+
+
 
 
 ];
@@ -80,6 +85,8 @@ const GuestListSection = () => {
                   className={`flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 ${
                     guest.status === "confirmed"
                       ? "bg-neon-green/10 border border-neon-green/30"
+                      : guest.status === "declined"
+                      ? "bg-red-500/10 border border-red-500/30"
                       : "bg-muted/30 border border-muted"
                   }`}
                 >
@@ -89,6 +96,8 @@ const GuestListSection = () => {
                     className={`w-12 h-12 rounded-full flex items-center justify-center ${
                       guest.status === "confirmed"
                         ? "bg-neon-green/20"
+                        : guest.status === "declined"
+                        ? "bg-red-500/20"
                         : "bg-muted"
                     }`}
                   >
@@ -96,6 +105,8 @@ const GuestListSection = () => {
                       <Crown className="w-6 h-6 text-neon-yellow" />
                     ) : guest.status === "confirmed" ? (
                       <Star className="w-6 h-6 text-neon-green" />
+                    ) : guest.status === "declined" ? (
+                      <UserX className="w-6 h-6 text-red-500" />
                     ) : (
                       <UserPlus className="w-6 h-6 text-muted-foreground" />
                     )}
@@ -106,12 +117,14 @@ const GuestListSection = () => {
                     <p className={`font-display font-semibold ${
                       guest.status === "confirmed"
                         ? "text-foreground"
+                        : guest.status === "declined"
+                        ? "text-red-400 line-through"
                         : "text-muted-foreground"
                     }`}>
                       {guest.name}
                     </p>
                     <p className="text-xs text-muted-foreground uppercase tracking-wider">
-                      {guest.status === "confirmed" ? "Potwierdzone" : "Oczekuje"}
+                      {guest.status === "confirmed" ? "Potwierdzone" : guest.status === "declined" ? "Nie może przyjść" : "Oczekuje"}
                     </p>
                   </div>
 
@@ -122,6 +135,8 @@ const GuestListSection = () => {
                     className={`w-3 h-3 rounded-full ${
                       guest.status === "confirmed"
                         ? "bg-neon-green shadow-[0_0_10px_hsl(var(--neon-green))]"
+                        : guest.status === "declined"
+                        ? "bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"
                         : "bg-muted-foreground"
                     }`}
                   />
