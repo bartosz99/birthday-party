@@ -12,10 +12,15 @@ const guests = [
   { name: "Bartosz Kwiatkowski", status: "confirmed", special: false },
   { name: "Agata Zwolak", status: "confirmed", special: false },
   { name: "Bartosz Wyciszkiewicz", status: "confirmed", special: false },
+  { name: "Kasia Jarosz", status: "pending", special: false },
   { name: "Gosia Kmon", status: "confirmed", special: false },
   { name: "Jakub Sroka", status: "confirmed", special: false },
-
-
+  { name: "Krzysiek Górak", status: "pending", special: false },
+  { name: "Ola Zielińska", status: "pending", special: false },
+  { name: "Weronika Gołota", status: "pending", special: false },
+  { name: "Eliza Wojnar", status: "pending", special: false },
+  { name: "Maks Wojnar", status: "pending", special: false },
+  { name: "Anoni Kułak", status: "pending", special: false },
 
 ];
 
@@ -49,7 +54,7 @@ const GuestListSection = () => {
             LISTA GOŚCI
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-            Kto będzie imprezować? Lista wkrótce się uzupełni!
+            (kolejność randomizowana i lista jeszcze będzie uzupełniana!)
           </p>
         </motion.div>
 
