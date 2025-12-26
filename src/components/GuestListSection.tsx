@@ -17,13 +17,13 @@ const guests = [
   { name: "Jakub Sroka", status: "confirmed", special: false },
   { name: "Krzysiek Górak", status: "confirmed", special: false },
   { name: "Bronislava Cieciak", status: "confirmed", special: false },
+  { name: "Kasia Jarosz", status: "confirmed", special: false },
+  { name: "Antoni Kułak", status: "confirmed", special: false },
+
   { name: "Ola Zielińska", status: "maybe", special: false },
   { name: "Weronika Gołota", status: "maybe", special: false },
-  { name: "Antoni Kułak", status: "pending", special: false },
-  { name: "Kasia Jarosz", status: "pending", special: false },
 
   { name: "Eliza Wojnar", status: "declined", special: false },
-
   { name: "Maks Wojnar", status: "declined", special: false },
   { name: "Stanislava Cieciak", status: "declined", special: false },
   { name: "Joanna Dubielewska", status: "declined", special: false },
